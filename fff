@@ -1040,7 +1040,7 @@ main() {
     # Trap the exit signal (we need to reset the terminal to a useable state.)
     trap 'reset_terminal' EXIT
 
-    # If FFF_ERROR_ON_SIGINT is 1, trap 'Ctrl+c' and exit by
+    # Unless FFF_ERROR_ON_SIGINT is 1, trap 'Ctrl+c' and exit by
     # mimicking the 'q' keypress. This allow us to run the same
     # plumbing on exit for both.
     if [ "$FFF_ERROR_ON_SIGINT" -eq 1 ]; then
